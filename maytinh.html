@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>May tinh</title>
+</head>
+<body>
+<form action="">
+    <table>
+        <tr>
+            <td>
+                <input id="sothunhat" type="text">
+            </td>
+            <td>
+                <input id="sothuhai" type="text">
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>
+                <button onclick="cong()">Cộng</button>
+            </td>
+            <td>
+                <button onclick="tru()">Trừ</button>
+            </td>
+            <td>
+                <button onclick="nhan()">Nhân</button>
+            </td>
+            <td>
+                <button onclick="chia()">Chia</button>
+            </td>
+        </tr>
+    </table>
+</form>
+<br><br>
+<p id="ketqua"></p>
+</body>
+</html>
+<script>
+
+    function cong(){
+        let sothunhat = parseInt(document.getElementById("sothunhat").value);
+        let sothuhai = parseInt(document.getElementById("sothuhai").value);
+        let ketqua = sothunhat + sothuhai;
+        document.write("Kết quả là: "+ ketqua);
+    }
+    function tru(){
+        let sothunhat = parseInt(document.getElementById("sothunhat").value);
+        let sothuhai = parseInt(document.getElementById("sothuhai").value);
+        let ketqua = sothunhat - sothuhai;
+        document.write("Kết quả là: "+ ketqua);
+    }
+    function nhan(){
+        let sothunhat = parseInt(document.getElementById("sothunhat").value);
+        let sothuhai = parseInt(document.getElementById("sothuhai").value);
+        let ketqua = sothunhat * sothuhai;
+        document.write("Kết quả là: "+ ketqua);
+    }
+    function chia(){
+        let sothunhat = parseInt(document.getElementById("sothunhat").value);
+        let sothuhai = parseInt(document.getElementById("sothuhai").value);
+        let ketqua = sothunhat / sothuhai;
+        document.write("Kết quả là: "+ ketqua);
+    }
+
+</script>
