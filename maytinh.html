@@ -9,10 +9,10 @@
     <table>
         <tr>
             <td>
-                <input id="sothunhat" type="text">
+                <input id="sothunhat" type="number">
             </td>
             <td>
-                <input id="sothuhai" type="text">
+                <input id="sothuhai" type="number">
             </td>
         </tr>
     </table>
@@ -34,16 +34,17 @@
     </table>
 </form>
 <br><br>
-<p id="ketqua"></p>
+<div><p id="ketqua"></p></div>
 </body>
 </html>
 <script>
 
     function cong(){
-        let sothunhat = parseInt(document.getElementById("sothunhat").value);
-        let sothuhai = parseInt(document.getElementById("sothuhai").value);
-        let ketqua = sothunhat + sothuhai;
-        document.write("Kết quả là: "+ ketqua);
+        let sothunhat = document.getElementById("sothunhat").value;
+        let sothuhai = document.getElementById("sothuhai").value;
+        let ketqua = Number(sothunhat) + Number(sothuhai);
+        // document.write("Kết quả là: "+ ketqua);
+        document.getElementById("ketqua").innerHTML = ketqua;
     }
     function tru(){
         let sothunhat = parseInt(document.getElementById("sothunhat").value);
