@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi tien te</title>
+</head>
+<body>
+<form action="">
+    <table>
+        <tr>
+            <td>Số tiền cần chuyển</td>
+            <td>Từ</td>
+            <td>Sang</td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="text" id="sotienchuyen">
+            </td>
+            <td>
+            <select name="" id="tu">
+
+                <option value="USD">
+                        USD
+                </option>
+                <option value="VND">
+                  VND
+              </option>
+          </select>
+            </td>
+            <td>
+                <select name="" id="sang">
+                    <option value="USD">
+                        USD
+                    </option>
+                    <option value="VND">
+                        VND
+                    </option>
+                </select>
+            </td>
+            <td>
+                <button onclick="chuyentien()">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <p id="ketqua"></p>
+</form>
+</body>
+</html>
+<script>
+    function chuyentien() {
+        let a = document.getElementById("sotienchuyen").value;
+        let b = document.getElementById("tu").value;
+        let c = document.getElementById("sang").value;
+        let ketqua;
+
+        if (b=="USD" && c=="USD") {
+            ketqua =("Ket qua: " + a +" USD");
+        }else if (b=="USD" && c=="VND"){
+            ketqua =("Ket qua: "+a*23000 + " VND");
+        }else if (b=="VND" && c=="USD"){
+            ketqua =("Ket qua: "+a/23000 + " USD");
+        }else{
+            ketqua =("Ket qua: "+a+ " VND");
+        }
+        document.getElementById("ketqua").innerHTML = document.write(ketqua);
+    }
+</script>
